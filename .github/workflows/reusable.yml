@@ -17,3 +17,7 @@ name: Reusable workflow
           - name: Set time
             id: time
             run: echo "time=$(date)" >> $GITHUB_OUTPUT
+        outputs:
+          current-time:
+            description: 'The time when greeting.'
+            value: ${{ jobs.reusable-job.outputs.current-time }}
