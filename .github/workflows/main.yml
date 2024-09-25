@@ -17,13 +17,13 @@ jobs:
 
       - name: List files in the repository
         run: |
-          echo "The repository ${{ github.repository }} contains the following files:"
+#          echo "The repository ${{ github.repository }} contains the following files:"
           tree
 
   Test:
     needs: Build
     runs-on: ubuntu-latest
-    if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.environment == 'Test' }}
+#    if: ${{ github.event_name == 'workflow_dispatch' && github.event.inputs.environment == 'Test' }}
     steps:
       - run: echo "Testing..."
 
